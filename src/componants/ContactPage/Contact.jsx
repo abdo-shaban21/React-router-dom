@@ -1,6 +1,7 @@
 import { NavLink, Outlet } from "react-router-dom";
 
 export default function Contact() {
+  
   return (
     <section className="contact">
       <div className="side_bar">

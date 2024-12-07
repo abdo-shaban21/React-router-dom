@@ -11,12 +11,15 @@ import Login from "./componants/LoginPage/Login";
 export default function App() {
   const Routing = createBrowserRouter([
     {
-      path: "",
+      path: "",element: <Login />
+    },
+    {
+      path: "home",
       element: <Layout />,
       // parent
       // this is welcome bage
       children: [
-        {path: "",element: <Home />},
+        {index:true,element: <Home />},
         {path: "about",element: <About />},
         {path: "service",element: <Service />},
         {path: "contact_us",element: <Contact />,
@@ -27,10 +30,10 @@ export default function App() {
             {path:"phone" , element:<h1>welcome to phone page</h1>},
           ]
         },
-        {path: "login",element: <Login />},
+        
         { path: "*", element: <section><h2>404 Not Found</h2></section> },
       ],
-    },
+    }
   ]);
   return (
     <>
